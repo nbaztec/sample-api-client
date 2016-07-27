@@ -10,10 +10,8 @@ import { API_RESPONSE_VERSION } from './types';
 export function fetchVersion() {
   return dispatch => {
     apiErrorReset(dispatch);
-    console.log('getting...');
     axiosApi().get(apiUrl('/api'))
       .then(response => {
-        console.log(response);
         switch (response.status) {
           case 200:
             dispatch({
@@ -28,7 +26,6 @@ export function fetchVersion() {
         }
       })
       .catch(error => {
-        console.log(error);
         apiError(dispatch, error);
       });
   };
