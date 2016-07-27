@@ -7,7 +7,7 @@
     "start": "node ./bin/www",
     "postinstall": "bower install",
     "test": "$(npm bin)/_mocha --opts ./tests/mocha.opts",
-    "test-coverage": "$(npm bin)/babel-node $(npm bin)/isparta cover --root ./public/javascripts/app $(npm bin)/_mocha -- --opts ./tests/mocha.opts"
+    "test-coverage": "$(npm bin)/babel-node $(npm bin)/isparta cover --include './**/*.js*' --root ./public/javascripts/app $(npm bin)/_mocha -- --opts ./tests/mocha.opts"
   },
   "dependencies": {
     "axios": "^0.13.1",
