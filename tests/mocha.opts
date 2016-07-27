@@ -1,0 +1,9 @@
+--compilers js:babel-core/register
+--bail
+--harmony
+--check-leaks
+--recursive
+--reporter spec
+--ui bdd
+--require ./tests/helper.js
+./tests/**/*.js
