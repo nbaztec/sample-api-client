@@ -84,13 +84,11 @@ describe('API Actions', () => {
 
       fetchVersion()(action => {
         try {
-          console.log(action);
           expect(action).to.eqls(expectedActions.shift());
           if (!expectedActions.length) {
             done();
           }
         } catch (err) {
-          console.log(err);
           done(err);
         }
       });
